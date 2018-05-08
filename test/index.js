@@ -24,4 +24,18 @@ describe('My App', () => {
             .catch(done);
     });
 
+    it('should load active challenges', (done) => {
+        const bundle = {};
+
+        appTester(App.triggers.activeChallenge.operation.perform, bundle)
+            .then(results => {
+              // console.log(results);
+                should(results.length).above(0);
+
+
+                done();
+            })
+            .catch(done);
+    });
+
 });

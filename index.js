@@ -1,4 +1,5 @@
 const recipe = require('./triggers/recipe');
+const activeChallenge = require('./triggers/activeChallenges');
 
 
 // We can roll up all our behaviors in an App.
@@ -21,7 +22,8 @@ const App = {
 
   // If you want your trigger to show up, you better include it here!
   triggers: {
-      [recipe.key]: recipe
+      [recipe.key]: recipe,
+      [activeChallenge.key]: activeChallenge
   },
 
   // If you want your searches to show up, you better include it here!
