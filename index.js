@@ -1,4 +1,3 @@
-const recipe = require('./triggers/recipe');
 const activeChallenge = require('./triggers/activeChallenges');
 
 
@@ -22,7 +21,6 @@ const App = {
 
   // If you want your trigger to show up, you better include it here!
   triggers: {
-      [recipe.key]: recipe,
       [activeChallenge.key]: activeChallenge
   },
 
