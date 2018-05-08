@@ -1,3 +1,6 @@
+const recipe = require('./triggers/recipe');
+
+
 // We can roll up all our behaviors in an App.
 const App = {
   // This is just shorthand to reference the installed dependencies you have. Zapier will
@@ -18,6 +21,7 @@ const App = {
 
   // If you want your trigger to show up, you better include it here!
   triggers: {
+      [recipe.key]: recipe
   },
 
   // If you want your searches to show up, you better include it here!
